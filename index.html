@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Study Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h1>🎮 Study Game</h1>
+
+<div class="card">
+  <div>⭐ XP: <span id="xp">0</span></div>
+  <div>🏆 Level: <span id="level">1</span></div>
+  <div class="bar">
+    <div id="levelBar"></div>
+  </div>
+</div>
+
+<div class="card">
+  <div>🔥 Streak: <span id="streak">0</span> gün</div>
+  <div>🧊 Freeze: <span id="freeze">1</span></div>
+</div>
+
+<div class="card">
+  <button onclick="addXP(100)">40 dk Test (+100)</button>
+  <button onclick="addXP(140)">1 Saat Test (+140)</button>
+  <button onclick="addXP(200)">1.5 Saat Test (+200)</button>
+  <button onclick="addXP(-20)">🚬 Sigara (-20)</button>
+</div>
+
+<div class="card">
+  <h3>📝 Günlük Plan</h3>
+  <input id="taskInput" placeholder="Bugün ne çalışacaksın?" />
+  <button onclick="addTask()">Ekle</button>
+  <ul id="taskList"></ul>
+</div>
+
+<div class="card">
+  <h3>📊 Haftalık Özet</h3>
+  <div id="weeklyStats"></div>
+  <canvas id="chart" height="160"></canvas>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
